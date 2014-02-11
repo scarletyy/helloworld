@@ -1,0 +1,13 @@
+<project name="Sample usage of Salesforce Ant tasks" default="deploy" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <!-- Test out deploy and retrieve verbs for package 'mypkg' -->
+    <target name="deploy">
+      <!-- Upload the contents of the "mypkg" package -->
+      <sf:deploy username="scarletyy@ci.open.edu.au" password="liuying00" serverurl="https://login.salesforce.com" maxPoll="20" deployRoot="mypkg" runAllTests="true" rollbackOnError="true"/>
+          </target>
+
+</project>
+
